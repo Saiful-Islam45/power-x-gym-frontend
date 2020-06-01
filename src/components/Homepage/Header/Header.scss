@@ -1,0 +1,112 @@
+$ff : Arial, Helvetica, sans-serif;
+$white:white;
+$gray:gray;
+$black:black;
+$yellow:yellow;
+$bgTransfarent:transparent;
+@mixin bgImg {
+    background-image: url('../../../images/headerBgImg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 260%;
+}
+:root {
+    margin: 0;
+    padding: 0;
+    font-family: $ff;
+
+}
+* {box-sizing: border-box;}
+
+
+
+body { 
+  margin: 0;
+  font-family: $ff;
+}
+h1, h2, h3,h4, button {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/*Header section*/
+.header-section {
+    @include bgImg();
+    height: 100vh;
+    width: 100vw;
+    
+}
+.yellow {
+    color: $yellow;
+}
+.whiteText{
+    color: $white;
+}
+
+.header {
+  
+  overflow: hidden;
+  background-color: $bgTransfarent;
+  padding: 2rem 1rem;
+
+  a {
+    float: left;
+    color: $white;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 1.2rem; 
+    line-height: 2.5rem;
+    border-radius: 0.4rem;
+    &:hover {
+        background-color: $bgTransfarent;
+        color: $black;
+    }
+  }
+
+  .logo {
+    font-size: 2.5rem;
+    color: $white !important;
+  }
+
+  .active {
+    background-color: $bgTransfarent;
+    color: $black
+  }
+
+  .header-right {
+    float: right;
+  }
+}
+.body-left{
+    padding: 2rem 0 2rem 5rem;
+    h1 {
+        font-size: 3.4rem;
+    }
+    p{
+      padding: 2rem 4rem 2rem 0rem;
+    }
+    .btn{
+      background-color: $yellow;
+      color: $black !important;
+      font-weight: bolder;
+      padding: 0.5rem 3rem;
+    }
+}
+.videoc {
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-right {
+    float: none;
+  }
+}

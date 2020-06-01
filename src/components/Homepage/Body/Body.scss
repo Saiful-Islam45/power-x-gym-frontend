@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.gray{
+  color: lightgray;
+}
+.yellow {
+  color: yellow;
+}
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.mid-card{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.card1 {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.card1 img {
+  vertical-align: middle;
+  width: 100%;
+  height: 150%;
+
+}
+.content {
+  @include flexCenter();
+  flex-direction: column;
+  position: absolute;
+  top:2;
+  bottom: 0;
+  // background: rgb(0, 0, 0); /* Fallback color */
+  // background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  img {
+    padding-bottom: 1rem;
+    width: 5rem;
+    height: auto;
+  }
+  
+}
+
+/*about us*/
+
+.about-img{
+  img {
+    width: 100%;
+    height: 90%;
+    padding-left: 3rem;
+  }
+}
+ /*training*/
+ .trainHeader {
+   padding-bottom: 2rem;
+   margin: 0 auto;
+ }
+
+ .training{
+   @include flexCenter();
+   
+   img {
+     
+     width: 30rem;
+     height: 25rem;
+   }
+ }
+ /*why us*/ 
+ .choose{
+ 
+ }
+ .whyUs {
+    @include flexCenter();
+ }
+ .whyHeader{
+   padding: 4rem;
+   margin: 0 auto;
+  
+ }
+ .why-content {
+  @include flexCenter();
+  flex-direction: column;
+  border: 1px solid lightgray;
+  padding: 2rem 0.5rem 0.5rem 0.5rem;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px gray;
+  &:hover {
+    border: 1px solid yellow;
+  }
+  img{
+    width: 100px;
+    height: 150px;
+    padding: 2rem 0rem;
+  }
+  h4{
+    font-size: 1.2rem;
+  }
+
+ }

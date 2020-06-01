@@ -1,0 +1,24 @@
+
+:root {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+.footer{
+    margin-top: 2rem;
+    padding-top: 2rem;
+    background-color: black;
+    color: white;
+    display:flex;
+    justify-content: start;
+    align-items: flex-start;
+    .yellow {
+        color: yellow;
+      }
+
+}
+.copy {
+    background-color: black;
+    color:gray
+}
